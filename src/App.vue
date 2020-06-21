@@ -1,10 +1,8 @@
 <template>
-    <v-app>
+    <v-app fill-height>
         <v-content>
             <shell>
-                <div slot="navBar" class="navBar">
-
-                </div>
+               <nav-bar slot="navBar"/>
                 <div slot="content"></div>
             </shell>
         </v-content>
@@ -12,20 +10,20 @@
 </template>
 
 <script>
-
     import Shell from "./components/mainPage/shell";
+    import NavBar from "./components/mainPage/navBar/navBar";
+
     export default {
         name: 'App',
 
-        components: {Shell},
+        components: {NavBar, Shell},
 
-        data: () => ({
-            //
-        }),
+        data(){
+            return{
+
+            }
+        }
     };
 </script>
 <style scoped lang="scss">
-    .navBar{
-        background-color: #F8F8F8;
-    }
 </style>
