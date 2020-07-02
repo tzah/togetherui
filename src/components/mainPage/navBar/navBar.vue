@@ -32,8 +32,8 @@
             </v-col>
         </v-row>
        <div style="width: fit-content" class="socialMenu">
-           <v-row dense class="socialMenu">
-               <v-col v-for="item in socialMenu" :key="item.id" class="ml-3">
+           <v-row class="socialMenu">
+               <v-col v-for="item in socialMenu" :key="item.id">
                    <img :src="item.src">
                </v-col>
            </v-row>
