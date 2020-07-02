@@ -16,26 +16,24 @@
         </v-row>
         <v-row v-for="item in navBarMenu" :key="item.id">
             <v-col>
-                <nav-bar-button :icon="item.icon" :text="item.text" class="navBarMenuItem"/>
+                <nav-bar-button :icon="item.icon" :text="item.text" class="navBarMenuItem" :linkTo="item.linkTo"/>
             </v-col>
         </v-row>
-        <router-link to="/foo">
-            tzhai
-        </router-link>
-        <v-row style="height: 29vh"/>
-        <v-row class="footer">
-            <v-col>
-                <div class="footerSpacer">
-                </div>
-            </v-col>
-        </v-row>
-       <div style="width: fit-content" class="socialMenu">
-           <v-row class="socialMenu">
-               <v-col v-for="item in socialMenu" :key="item.id">
-                   <img :src="item.src">
-               </v-col>
-           </v-row>
-       </div>
+        <div class="socialMediaContainer">
+            <v-row class="footer">
+                <v-col>
+                    <div class="footerSpacer">
+                    </div>
+                </v-col>
+            </v-row>
+            <div style="width: fit-content" class="socialMenu">
+                <v-row class="socialMenu">
+                    <v-col v-for="item in socialMenu" :key="item.id">
+                        <img :src="item.src" class="image">
+                    </v-col>
+                </v-row>
+            </div>
+        </div>
     </v-container>
 </template>
 
@@ -50,10 +48,10 @@
         data() {
             return {
                 navBarMenu: [
-                    {id: 1, icon: "megaPhone", text: "Notifications"},
-                    {id: 2, icon: "myCards", text: "My-Cards"},
-                    {id: 3, icon: "heart", text: "Favorite"},
-                    {id: 4, icon: "group", text: "Groups"},
+                    {id: 1, icon: "megaPhone", text: "Notifications", linkTo: "Notifications"},
+                    {id: 2, icon: "myCards", text: "My-Cards", linkTo: "MyCardsPage"},
+                    {id: 3, icon: "heart", text: "Favorite", linkTo: "FavoritePage"},
+                    {id: 4, icon: "group", text: "Groups", linkTo: "GroupsPage"},
                 ],
                 socialMenu: [
                     {id: 1, src: require("../../../assets/LinkdinLogo.svg")},
@@ -66,7 +64,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .navBar {
         background-color: #F8F8F8;
     }
@@ -85,5 +83,16 @@
     .footerSpacer {
         height: 5px;
         border: 1px solid #295A84;
+    }
+
+    .image {
+        width: 2vw;
+        height: 3.5vh;
+        max-height: 30px;
+        max-width: 30px;
+    }
+
+    ::v-deep a {
+        text-decoration: none;
     }
 </style>
