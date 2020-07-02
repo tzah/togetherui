@@ -2,7 +2,7 @@
     <v-container class="navBar">
         <v-row style=" padding-top: 1vh">
             <v-col cols="3" style="padding-left: 2vw;">
-               <SettingsIcon/>
+                <SettingsIcon/>
             </v-col>
             <v-spacer/>
             <v-col cols="1" style="padding-right: 3vw; padding-top: 17px">
@@ -11,9 +11,7 @@
         </v-row>
         <v-row>
             <v-col>
-                <transition name="fade">
-                    <profile-image class="userDetails"/>
-                </transition>
+                <profile-image class="userDetails"/>
             </v-col>
         </v-row>
         <v-row v-for="item in navBarMenu" :key="item.id">
@@ -45,6 +43,7 @@
     import ProfileImage from "../ProfileImage";
     import NavBarButton from "./navBarButton";
     import SettingsIcon from "../../Icons/SettingsIcon";
+
     export default {
         name: "navBar",
         components: {SettingsIcon, NavBarButton, ProfileImage},
@@ -56,11 +55,11 @@
                     {id: 3, icon: "heart", text: "Favorite"},
                     {id: 4, icon: "group", text: "Groups"},
                 ],
-                socialMenu:[
-                    {id: 1, src:require("../../../assets/LinkdinLogo.svg")},
-                    {id: 2, src:require("../../../assets/OneNoteLogo.svg")},
-                    {id: 3, src:require("../../../assets/InstegramLogo.svg")},
-                    {id: 4, src:require("../../../assets/YouTubeLogo.svg")},
+                socialMenu: [
+                    {id: 1, src: require("../../../assets/LinkdinLogo.svg")},
+                    {id: 2, src: require("../../../assets/OneNoteLogo.svg")},
+                    {id: 3, src: require("../../../assets/InstegramLogo.svg")},
+                    {id: 4, src: require("../../../assets/YouTubeLogo.svg")},
                 ]
             }
         }
@@ -75,6 +74,12 @@
     .userDetails, .navBarMenuItem, .footer, .socialMenu {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .socialMediaContainer {
+        position: absolute;
+        bottom: 1vh;
+        width: 16.6667%;
     }
 
     .footerSpacer {

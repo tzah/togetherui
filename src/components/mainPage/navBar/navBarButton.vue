@@ -26,12 +26,15 @@
 </script>
 
 <style scoped lang="scss">
-    .icon, .text {
+    .iconContainer, .text {
         margin-right: auto;
         margin-left: auto;
     }
     .text{
         color: #79828B;
-        cursor: default;
     }
+    /*.icon{*/
+    /*    width: 1.3vw;*/
+    /*    height: 2.5vh;*/
+    /*}*/
 </style>
