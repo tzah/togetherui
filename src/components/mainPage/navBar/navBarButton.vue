@@ -1,13 +1,15 @@
 <template>
     <div style="width: fit-content" class="mt-5">
-           <div class="icon" style="width: fit-content">
-               <v-icon>
-                   {{'$'+icon}}
-               </v-icon>
-           </div>
-           <div class="text">
-               {{text}}
-           </div>
+        <router-link :to="linkTo">
+            <div class="iconContainer" style="width: fit-content">
+                <v-icon class="icon">
+                    {{'$'+icon}}
+                </v-icon>
+            </div>
+            <div class="text">
+                {{text}}
+            </div>
+        </router-link>
     </div>
 </template>
 
@@ -19,6 +21,9 @@
                 type: String
             },
             text: {
+                type: String
+            },
+            linkTo:{
                 type: String
             }
         }
