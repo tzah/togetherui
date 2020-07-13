@@ -1,12 +1,14 @@
 <template>
     <div>
-        tzahiNakash
+        <action-button/>
     </div>
 </template>
 
 <script>
+    import ActionButton from "./cardsPage/actionBar/actionButton";
     export default {
-        name: "Notifications"
+        name: "Notifications",
+        components: {ActionButton}
     }
 </script>
 

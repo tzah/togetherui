@@ -38,8 +38,4 @@
     .text{
         color: #79828B;
     }
-    /*.icon{*/
-    /*    width: 1.3vw;*/
-    /*    height: 2.5vh;*/
-    /*}*/
 </style>
